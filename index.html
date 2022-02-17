@@ -8,34 +8,38 @@
     <!-- bootstrap link added -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3f2850d7f0.js" crossorigin="anonymous"></script>
    
 </head>
-<body>
+<body class="color">
+  <marquee  direction="left" >
+    welcome to money bag store .This is goribeyana Money bag store.
+    </marquee>
     <header>
-        <h1 class="text-center mt-5">Money-Bag store</h1>
+        <h1 class="text-center mt-5">Money-Bag store <i class="fa-solid fa-money-check-dollar"></i></h1>
     </header>
 
     <main>
-        <section class="ms-4">
+        <section class="ms-4 ">
             <div class="container mt-5 ps-5">
                 <div class="row">
                   <div class="col col-12 col-md-6">
                    <img src="img/dollar.jpg" class="img-fluid" alt="">
                   </div>
                   <!-- form related feild start -->
-                  <div class="col col-12 col-md-6 ps-5 shadow-lg ">
+                  <div class="col col-12 col-md-6 ps-5 shadow-lg  back-color " >
                       <!-- for income feild -->
                      <div class="ms-5">
-                        <h6>Income</h6>
+                        <h6 class="ms-5 ps-5">Income</h6>
                         <form>
                            <div class="form-group">
                              <label>Income:</label>
-                             <input id="income-amount" type="text" >
+                             <input id="income-amount" type="text"  >
                            </div>
                        
                          </form>
                          <!-- expenses form create -->
-                         <h6>Expenses</h6>
+                         <h6 class="ms-5 ps-5">Expenses</h6>
                          <form>
                            <div class="form-group">
                              <label>Food:</label>
@@ -54,14 +58,14 @@
                        
                          </form>
                           <!-- expenses form create and calculate button added for js work -->
-                          <button id="calculate-button" type="button" class="btn btn-primary ms-5 mt-3
+                          <button id="calculate-button" type="button" class="btn btn-primary ms-5 mt-3 ps-4
                           ">Calculate</button>
                      </div>
 
                        <!-- Total expenses area  -->
-                       <div class="mt-3 text-center">
-                        <h6> Total Expenses: <span id="total-expense">0</span></h6>
-                        <h6>Balance: <span id="total-balance">0</span></h6>
+                       <div class="mt-3 ms-4 ">
+                        <h6 class="ms-5 ps-5"> Total Expenses: <span id="total-expense">0</span></h6>
+                        <h6 class="ms-5 ps-5">Balance: <span id="total-balance">0</span></h6>
                        </div>
                        <!-- saving area  -->
                       <div class="input-group ms-5">
@@ -71,9 +75,9 @@
                         <button id="save-button"type="button" class="btn btn-primary">Save</button>
                       </div>
                       <!-- saving amount and remaning balance -->
-                      <div class="mt-3 text-center">
-                        <h6> Saving amount: <span id="save-amount">0</span></h6>
-                        <h6> Remaining Balance: <span id="remain-balance">0</span></h6>
+                      <div class="mt-3 ">
+                        <h6 class="ms-5 ps-5"> Saving amount: <span id="save-amount">0</span></h6>
+                        <h6 class="ms-5 ps-5"> Remaining Balance: <span id="remain-balance">0</span></h6>
                        </div>
                      </div>
                       

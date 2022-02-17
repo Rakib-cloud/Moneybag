@@ -12,3 +12,9 @@
     width: 35%;
     margin: 0 auto;
 }
+.back-color{
+    background-color: rgb(35, 139, 122);
+}
+.color{
+    background-color: rgba(56, 30, 30, 0.493);
+}
