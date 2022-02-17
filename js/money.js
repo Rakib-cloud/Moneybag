@@ -4,8 +4,16 @@
 function getinputvalue(inputid){
     const inputfeild=document.getElementById(inputid);
              const inputamounttext=inputfeild.value; //value ta nilam
+             //error case 1:when user press string it will show error
+           if(isNaN(inputamounttext)){
+                alert("Please enter a value not string ");
+              }
              const inputamount=parseFloat(inputamounttext);
-            // inputfeild.value= ''; 
+            
+            //error case 2: when input feild value is negative 
+            if(inputamount<=0){
+                alert("Please enter positive value");
+            }
              return inputamount;
 }
 //update total expense and total balance.
