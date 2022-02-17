@@ -3,7 +3,7 @@
 
 function getinputvalue(inputid){
     const inputfeild=document.getElementById(inputid);
-             const inputamounttext=inputfeild.value; //value ta nilam
+             const inputamounttext=inputfeild.value; 
              //error case 1:when user press string it will show error
            if(isNaN(inputamounttext)){
                 alert("Please enter a value not string ");
@@ -88,6 +88,12 @@ document.getElementById('calculate-button').addEventListener('click',function(){
 
   expenseandbalanceupdate(incomeamount,expensefood,expenserent,expensecloth,'total-balance',false);
   
+  //error 2: if expense >income than error show
+  const failmessage=document.getElementById('notify-error');
+  const totalexpenseamount=document.getElementById('total-expense').innerText;
+  if(totalexpenseamount>incomeamount){
+    failmessage.style.display='block';
+  }
 
 });
 
@@ -100,6 +106,12 @@ document.getElementById('save-button').addEventListener('click',function(){
     //remaining balance calculation
     const previousbalance=document.getElementById('total-balance').innerText;
     remainbalance(getsaveamount,previousbalance);
+
+    //bonus error:1.. if saving amount is greater than balance amount
+    const failmessage=document.getElementById('notify-fail')
+    if(getsaveamount>previousbalance){
+        failmessage.style.display='block';
+    }
    
 
 });
